@@ -1,5 +1,6 @@
 require 'rspec'
-require_relative './answers'
+require_relative './pablo'
+# require_relative './answers'
 
 RSpec.configure do |config|
   config.color = true
@@ -201,7 +202,7 @@ describe 'the Friday test :)' do
     expect(n).to eq 70
   end
 
-  fit 'call_method_from_string' do
+  specify 'call_method_from_string' do
     expect { call_method_from_string('foobar') }.to raise_error(NameError)
     expect(call_method_from_string("'hello'")).to eq("hello")
   end
